@@ -4,11 +4,6 @@ import { FormattedMessage } from 'react-intl';
 import Slider from 'react-slick';
 
 class HandBook extends Component {
-
-    changeLanguage = (language) => {
-        this.props.changeLanguageAppRedux(language);
-    }
-
     render() {
         return (
             <div className='section-share section-handbook'>
