@@ -138,7 +138,6 @@ class UserRedux extends Component {
         }
 
         if (action === CRUD_ACTIONS.EDIT) {
-            console.log(this.state);
             this.props.editAUserRedux({
                 id: this.state.userEditId,
                 email: this.state.email,
