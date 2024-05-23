@@ -9,7 +9,20 @@
     }
 
     .pick-hour-container{
-        height: 150px;
-        border: 1px solid red;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        button {
+            padding: 5px 15px;
+            border: 1px solid grey;
+        }
+
+    }
+
+    .btn-save-schedule {
+        margin-top: 20px;
     }
 }
