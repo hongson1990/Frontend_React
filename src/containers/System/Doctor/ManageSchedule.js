@@ -35,17 +35,17 @@ class ManageSchedule extends Component {
         }
 
         if (prevProps.allScheduleTime !== this.props.allScheduleTime) {
+            let data = this.props.allScheduleTime;
+            if (data && data.length > 0) {
+                data = data.map((item, index) => {
+                    item.isSelected = false;
+                    return item;
+                });
+            }
             this.setState({
                 rangeTime: this.props.allScheduleTime
             });
         }
-
-        // if (prevProps.language !== this.props.language) {
-        //     let dataSelect = this.buildDataInputSelect(this.props.allDoctors);
-        //     this.setState({
-        //         listDoctors: dataSelect
-        //     })
-        // }
     }
 
     buildDataInputSelect = (inputData) => {
@@ -74,6 +74,19 @@ class ManageSchedule extends Component {
         this.setState({
             currentDate: date[0]
         });
+    }
+
+    handleClickBtnTime = (time) => {
+        let { rangeTime } = this.state;
+        if (rangeTime && rangeTime.length > 0) {
+            rangeTime = rangeTime.map(item => {
+                if (item.id === time.id) item.isSelected = !item.isSelected;
+                return item;
+            });
+            this.setState({
+                rangeTime: rangeTime
+            });
+        }
     }
 
     render() {
@@ -108,7 +121,11 @@ class ManageSchedule extends Component {
                                 {rangeTime && rangeTime.length > 0 &&
                                     rangeTime.map((item, index) => {
                                         return (
-                                            <button className='btn btn-schedule' key={index}>
+                                            <button
+                                                className='btn btn-schedule'
+                                                key={index}
+                                                onClick={() => this.handleClickBtnTime(item)}
+                                            >
                                                 {language === LANGUAGES.VI ? item.valueVi : item.valueEn}
                                             </button>
                                         )

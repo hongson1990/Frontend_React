@@ -1,5 +1,5 @@
 .manage-schedule-container {
-    .m-s-title{
+    .m-s-title {
         text-transform: uppercase;
         margin-top: 15px;
         margin-bottom: 15px;
@@ -8,7 +8,7 @@
         text-align: center;
     }
 
-    .pick-hour-container{
+    .pick-hour-container {
         padding-top: 20px;
         padding-bottom: 20px;
         display: flex;
@@ -24,5 +24,7 @@
 
     .btn-save-schedule {
         margin-top: 20px;
+
+        &.active {}
     }
 }
