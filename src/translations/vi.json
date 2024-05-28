@@ -73,7 +73,7 @@
         },
         "extra-infor-doctor": {
             "text-address": "Địa chỉ khám",
-            "price": "Giá khám: ",
+            "price": "Giá khám:",
             "detail": "Xem chi tiết",
             "payment": "Bệnh viện có các hình thức thanh toán: ",
             "hide-price": "Ẩn bảng giá"

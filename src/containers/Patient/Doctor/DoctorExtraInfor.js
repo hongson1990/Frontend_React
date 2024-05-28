@@ -53,9 +53,11 @@ class DoctorExtraInfor extends Component {
                     </div>
                 </div>
                 <div className='content-down'>
+                    <span className='title-price'>
+                        <FormattedMessage id='patient.extra-infor-doctor.price' />
+                    </span>
                     {isShowDetailInfor === false &&
-                        <div className='short-infor'>
-                            <FormattedMessage id='patient.extra-infor-doctor.price' />
+                        <span className='short-infor'>
                             {extraInfor && extraInfor.priceTypeData && language === LANGUAGES.VI &&
                                 <NumberFormat
                                     value={extraInfor.priceTypeData.valueVi}
@@ -63,7 +65,6 @@ class DoctorExtraInfor extends Component {
                                     thousandSeparator={true}
                                     suffix={'đ'}
                                     className='currency' />
-
                             }
                             {extraInfor && extraInfor.priceTypeData && language === LANGUAGES.EN &&
                                 <NumberFormat
@@ -76,14 +77,11 @@ class DoctorExtraInfor extends Component {
                             <span className='detail' onClick={() => this.showHideDetailInfor(true)}>
                                 <FormattedMessage id='patient.extra-infor-doctor.detail' />
                             </span>
-                        </div>
+                        </span>
                     }
 
                     {isShowDetailInfor === true &&
                         <>
-                            <div className='title-price'>
-                                <FormattedMessage id='patient.extra-infor-doctor.price' />
-                            </div>
                             <div className='detail-infor'>
                                 <div className='price'>
                                     <span className='left'>
