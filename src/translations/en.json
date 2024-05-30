@@ -77,6 +77,20 @@
             "detail": "See details",
             "payment": "The hospital has payment methods: ",
             "hide-price": "Hide price list"
+        },
+        "booking-modal": {
+            "title": "Information on scheduling medical appointment",
+            "fullName": "Full name",
+            "phoneNumber": "Phone number",
+            "email": "Email",
+            "address": "Address",
+            "reason": "Reason for medical examination",
+            "birthday": "Date of birth",
+            "genders": "Genders",
+            "btnConfirm": "Confirm",
+            "btnCancel": "Cancel",
+            "priceBooking": "Free booking",
+            "price": "Price: "
         }
     },
     "admin": {
