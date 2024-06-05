@@ -7,7 +7,8 @@
 
         .content-left {
             width: 20%;
-            background: center center no-repeat;
+            background-repeat:no-repeat;
+            background-position: center;
             background-size: cover;
             width: 120px;
             height: 120px;
@@ -25,12 +26,15 @@
                 padding-top: 15px;
                 font-size: 20px;
                 font-weight: 600;
-                padding-top: 10px;
             }
 
             .down {
                 white-space: pre-wrap;
                 word-wrap: break-word;
+
+                .like-share-plugin {
+                    margin: 10px 0 20px 0;
+                }
             }
         }
     }
